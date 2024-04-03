@@ -33,3 +33,19 @@ body {
     text-wrap: balance;
   }
 }
+
+.search-view::-webkit-scrollbar {
+  /*display: none;*/
+  width: 8px;
+  background-color: darkgray;
+}
+
+.search-view::-webkit-scrollbar-thumb {
+  background: gray;
+  border-radius: 10px;
+}
+
+.search-view::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
