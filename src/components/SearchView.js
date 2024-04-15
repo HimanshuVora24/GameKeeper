@@ -18,8 +18,8 @@ function SearchView() {
         )
     });
     return (
-        <div className="flex flex-col h-full bg-emerald-600 p-4 pl-0 overflow-y-scroll search-view">
-            <div>
+        <div className="flex flex-col h-full bg-emerald-600 p-4">
+            <div className="flex flex-col h-full bg-emerald-700 p-2 pb-0 rounded-md overflow-y-scroll search-view">    
                 {searchItems}
             </div>
         </div>
