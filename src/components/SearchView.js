@@ -1,15 +1,16 @@
 import searchGame from "@/utils/IGDBRequest";
 import { useEffect, useState } from "react";
 import SearchItem from "./SearchItem";
-
+import tempGameData from "./TempData";
 function SearchView() {
     const [searchResults, setSearchResults] = useState([]);
     useEffect(()=>{
         let query = sessionStorage.getItem("searchQuery");
         if (!query) query = ""; 
-        searchGame(query).then((res)=>{
-            setSearchResults(res);
-        });
+        // searchGame(query).then((res)=>{
+        //     setSearchResults(res);
+        // });
+        setSearchResults(tempGameData);
     },[]);
 
     var searchItems = searchResults.map((game) => {

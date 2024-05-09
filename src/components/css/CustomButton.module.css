@@ -1,0 +1,17 @@
+#sidebar_button {
+    padding: 1rem;
+    border-top-right-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+    border-width: 2px;
+    border-left-width: 0px;
+    border-color: black;
+    padding: 0.5rem;
+}
+
+#sidebar_completed {
+    background: linear-gradient(to right, #877D48, #FCD928);   
+}
+
+#sidebar_completed:hover {
+    background: #1a5e4d;
+}
