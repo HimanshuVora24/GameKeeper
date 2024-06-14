@@ -1,10 +1,11 @@
 import searchGame from "@/utils/IGDBRequest";
 import { useEffect, useState } from "react";
+import AddPanel from "./AddPanel";
 
 function MainView() {
     const [t_5, setT_5] = useState([{},{},{},{},{}]);
     // useEffect(()=>{
-    //     searchGame("League").then((res)=>{
+    //     searchGame("Yakuza").then((res)=>{
     //         setT_5(res);
     //     });
     // },[]);
@@ -18,8 +19,9 @@ function MainView() {
     });
 
     return (
-        <div className="flex min-h-full bg-emerald-600 p-4 pl-0">
-            <div className="flex-1 flex flex-col bg-emerald-700 rounded-xl p-4">
+        <div className="flex min-h-full p-4 pl-0" style={{background:"linear-gradient(73deg, #252525 49%, #4B4B4B)"}}>
+            <div className="flex-1 flex flex-col rounded-xl p-4">
+            {/* <AddPanel/> */}
                 <div className="flex flex-row basis-1/2">
                     <div className="basis-1/5 flex flex-col items-center">
                         <div className="p-2 pt-0">
@@ -52,11 +54,12 @@ function MainView() {
                                     <div>9</div>
                                     <div style={{fontSize:".25em"}}>Average</div>
                                 </div>
-                                <div className="basis-1/2 h-full border-black rounded-r-md border-2 border-l-0"></div>
+                                <div className="basis-1/2 h-full border-black rounded-r-md border-2 border-l-0"
+                                    style={{background:"linear-gradient(180deg, #D9D9D9, #858585)"}}></div>
                             </div>
                             <div className="flex flex-row basis-3/4 h-full justify-end">
                                 <div className="flex flex-col basis-3/4 h-full">
-                                    <div className="basis-1/5 flex items-center justify-center border-2 border-r-0 rounded-tl-md border-black">Games</div>
+                                    <div style={{background:"#676767"}} className="basis-1/5 flex items-center justify-center border-2 border-r-0 rounded-tl-md border-black">Games</div>
                                     <div style={{fontFamily:"K2D",color:"black"}} className="basis-5/6 flex flex-row">
                                         <div style={{background:"#FCD928"}} className="flex flex-col basis-1/6 items-center justify-center border-l-2 border-b-2 border-black rounded-bl-md">
                                             <div>10000</div>
@@ -84,17 +87,19 @@ function MainView() {
                                         </div>
                                     </div>
                                 </div>
-                                <div className="basis-1/6 h-full border-2 rounded-tr-md rounded-br-md border-black "></div>
+                                <div className="basis-1/6 h-full border-2 rounded-tr-md rounded-br-md border-black "
+                                    style={{background:"linear-gradient(180deg, #D9D9D9, #858585)"}}></div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex basis-2/5 mt-8 pl-2" style={{width:"85%"}}>
-                    <div className="flex flex-row bg-emerald-400 rounded-xl space-x-2 p-2" style={{width:"100%"}}>
-                        <div className="basis-1/6">Top 5</div>
+                <div className="flex basis-1/2 mt-8 pl-2" style={{width:"85%"}}>
+                    <div className="flex flex-row  rounded-xl space-x-2 p-2" style={{width:"100%"}}>
+                        <div className="basis-1/6"></div>
                         {t_5Elem}
                     </div>
                 </div>
+                {/* <div className="flex basis-2/5 bg-white"></div> */}
             </div>
         </div>
     )

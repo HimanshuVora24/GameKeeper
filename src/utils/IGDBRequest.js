@@ -6,7 +6,7 @@ async function searchGame(name) {
         headers: {
             'Content-Type':'application/json'
         },
-        url:'http://localhost:5120/api/GD/search',
+        url:'http://localhost:5120/api/IGDB/search',
         data: JSON.stringify(name)
     }).then((res)=> {
         console.log(res.data);
