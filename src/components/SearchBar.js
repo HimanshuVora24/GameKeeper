@@ -6,7 +6,10 @@ export default function SearchBar() {
     const router = useRouter();
     const search = () => {
         sessionStorage.setItem("searchQuery", searchQuery);
-        router.push('/search')
+        router.push({ 
+            pathname: '/search',
+            query: {q: searchQuery}
+        });
     }
     return (
         <div className="flex basis-1/2 text-2xl">

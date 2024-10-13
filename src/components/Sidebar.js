@@ -5,13 +5,12 @@ function Sidebar() {
     const button_class = "hover:bg-emerald-900 bg-emerald-700 rounded-r-md border-2 border-l-0 border-black p-2";
     const sidebar_class = "flex flex-col min-h-full bg-emerald-600 p-4 pl-0 text-2xl justify-between";
     const router = useRouter();
-    const [currentTab, setCurrentTab] = useState(-1);
+    const currentTab = (router.pathname == '/') ? 0 : 1;
     return(
         <div className="flex flex-col min-h-full p-4 pl-0 text-2xl justify-between"
             style={{backgroundColor:"#252525"}}>
                 <div className="flex flex-col">
                     <button className={((currentTab==0) ? 'sidebar_selected' : 'sidebar_button')} onClick={()=> {
-                        
                         router.push('/');
                         }}>Profile</button>
                 </div>

@@ -93,6 +93,26 @@ body {
     width: 90%;
     box-shadow: inset 1000px 1000px rgb(0,0,0,0.2)
   }
+
+  .fav_game_cover {
+    /* opacity: 90%; */
+    /* background-color: #161414; */
+    /* padding-top:50%; */
+    border-color: black;
+    border-width: 2px;
+    position: relative;
+    transition-duration: 0.2s;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .fav_game_cover:hover {
+    /* opacity: 90%; */
+    /* transform: translate(2%,2%); */
+    transform: scale(1.05);
+    border-color: white;
+    border-width: 2px;
+  }
 }
 
 @layer utilities {

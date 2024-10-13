@@ -1,20 +1,24 @@
 import searchGame from "@/utils/IGDBRequest";
 import { useEffect, useState } from "react";
 import AddPanel from "./AddPanel";
+import tempGameData from "./TempData";
+import FavoriteGame from "./FavoriteGame";
 
 function MainView() {
     const [t_5, setT_5] = useState([{},{},{},{},{}]);
-    // useEffect(()=>{
-    //     searchGame("Yakuza").then((res)=>{
-    //         setT_5(res);
-    //     });
-    // },[]);
+    useEffect(()=>{
+        // searchGame("Yakuza").then((res)=>{
+        //     setT_5(res);
+        // });
+        setT_5(tempGameData.slice(0,5));
+    },[]);
 
     var t_5Elem = t_5.map((game, index) => {
         return (
-            <div key={(game.id) ? game.id : index} className="flex basis-1/6 bg-gray-600 rounded-xl items-center border-black border-2">
-                {/* <img className="rounded-xl object-cover h-full w-full" src={game.cover?.url.replace("t_thumb", "t_cover_big")}/> */}
-            </div>
+            // <div key={(game.id) ? game.id : index} className="flex basis-1/6 bg-gray-600 rounded-xl items-center border-black border-2">
+            //     <img className="rounded-xl object-cover h-full w-full" src={game.cover?.url.replace("t_thumb", "t_cover_big")}/>
+            // </div>
+            <FavoriteGame game={game} index={index} />
         )
     });
 
@@ -22,12 +26,16 @@ function MainView() {
         <div className="flex min-h-full p-4 pl-0" style={{background:"linear-gradient(73deg, #252525 49%, #4B4B4B)"}}>
             <div className="flex-1 flex flex-col rounded-xl p-4">
             {/* <AddPanel/> */}
-                <div className="flex flex-row basis-1/2">
+                <div className="flex flex-row h-2/3">
                     <div className="basis-1/5 flex flex-col items-center">
                         <div className="p-2 pt-0">
-                            <img className="h-full w-full object-cover border-2 border-black rounded-md" src="/ayanokoji_pfp.jpg"/>
+                            <div className="overflow-hidden block border-2 border-black rounded-xl" style={{aspectRatio:'1/1.5'}}>
+                                <img className="h-full w-full object-cover" src="/berserk.jpg"
+                                    style={{transform:"scale(1.0)"}}/>
+                            </div>
                         </div>
-                        <div style={{color:"white", background:"#4C4C4C"}} className="pl-2 border-2 pr-2 rounded-md border-black">Joined: 19th May 2020</div>
+                        <div style={{color:"white", background:"#4C4C4C", fontFamily:"K2D", boxShadow:"inset -2px -2px 4px black"}} 
+                            className="pl-2 pr-2 rounded-md border-black">Joined: 19th May 2020</div>
                     </div>
                     <div className="basis-4/6 flex flex-col pl-4">
                         <div style={{flexBasis:"12%", background:"linear-gradient(to right, #E3E3E3,#A5A5A5,#5F5E5E)", color:"#000000", fontSize:"1.75em"}} 
@@ -94,8 +102,8 @@ function MainView() {
                     </div>
                 </div>
                 <div className="flex basis-1/2 mt-8 pl-2" style={{width:"85%"}}>
-                    <div className="flex flex-row  rounded-xl space-x-2 p-2" style={{width:"100%"}}>
-                        <div className="basis-1/6"></div>
+                    <div className="flex flex-row  rounded-xl space-x-2 p-2 justify-end relative" style={{width:"100%"}}>
+                        {/* <div className="basis-1/6"></div> */}
                         {t_5Elem}
                     </div>
                 </div>

@@ -7,6 +7,7 @@ var tempGameData = [
         description: "The glitz, glamour, and unbridled decadence of the 80s are back! Yakuza 0 is a prequel set in 1988 to the Yakuza series, taking place before the first game. Fight like hell through Tokyo and Osaka with protagonist Kazuma Kiryu and series regular Goro Majima. Play as Kazuma Kiryu and discover how he finds himself in a world of trouble when a simple debt collection goes wrong and his mark winds up murdered. Then, step into the silver-toed shoes of Goro Majima and explore his “normal” life as the proprietor of a cabaret club.",
         avgScore: 8,
         userScore: 8,
+        scoreDist: [2, 10, 4, 20, 70, 30, 10, 40, 40, 20],
     }, 
     { 
         name: "Persona 3 Reload",
@@ -16,6 +17,7 @@ var tempGameData = [
         description: "Dive into the Dark Hour and awaken the depths of your heart. Persona 3 Reload is a captivating reimagining of the genre-defining RPG, reborn for the modern era with cutting-edge graphics and gameplay.",
         avgScore: 2,
         userScore: 6,
+        scoreDist: [2, 10, 4, 20, 70, 30, 10, 40, 40, 20],
     },
     { 
         name: "Octopath Traveler 2",
@@ -28,6 +30,7 @@ var tempGameData = [
                         Every path is yours to take. Embark on an adventure all your own.",
         avgScore: 9,
         userScore: 0,
+        scoreDist: [4, 10, 7, 2, 22, 73, 12, 43, 2, 8],
     },
     { 
         name: "Elden Ring",
@@ -37,6 +40,7 @@ var tempGameData = [
         description: "Elden Ring is a fantasy, action and open world game with RPG elements such as stats, weapons and spells. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
         avgScore: 4,
         userScore: 2,
+        scoreDist: [6, 4, 1, 48, 3, 12, 22, 11, 22, 1],
     },
     { 
         name: "Ori and the Will of Wisps",
@@ -46,6 +50,7 @@ var tempGameData = [
         description: "The little spirit Ori is no stranger to peril, but when a fateful flight puts the owlet Ku in harm's way, it will take more than bravery to bring a family back together, heal a broken land, and discover Ori's true destiny. From the creators of the acclaimed action-platformer Ori and the Blind Forest comes the highly anticipated sequel. Embark on an all-new adventure in a vast world filled with new friends and foes that come to life in stunning, hand-painted artwork. Set to a fully orchestrated original score, Ori and the Will of the Wisps continues the Moon Studios tradition of tightly crafted platforming action and deeply emotional storytelling.",
         avgScore: 7,
         userScore: 5,
+        scoreDist: [43, 26, 23, 86, 123, 23, 89, 23, 35, 48],
     },
     { 
         name: "Castlevania: Symphony of the Night",
@@ -55,6 +60,7 @@ var tempGameData = [
         description: "Dive into the Dark Hour and awaken the depths of your heart. Persona 3 Reload is a captivating reimagining of the genre-defining RPG, reborn for the modern era with cutting-edge graphics and gameplay.",
         avgScore: 6,
         userScore: 3,
+        scoreDist: [3, 97, 2, 54, 34, 75, 23, 97, 67, 97],
     },
     { 
         name: "Doom Eternal",
@@ -64,6 +70,7 @@ var tempGameData = [
         description: "Hell's armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you..",
         avgScore: 10,
         userScore: 7,
+        scoreDist: [26, 97, 34, 29, 34, 86, 43, 22, 75, 11],
     }
 ];
 
